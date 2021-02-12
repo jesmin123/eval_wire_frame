@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                             leading: Icon(Icons.assignment_outlined,
                                 color: PRIMARY_COLOR),
                             title: Text(
-                              RATES_OFFERED,
+                              PRICE_NEGOTIATION,
                               style: AppFontStyle.regularTextStyle2(
                                   APP_BLACK_COLOR,
                                   textSize: 18.0),
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                               color: PRIMARY_COLOR,
                             ),
                             onTap: (){
-                              Navigator.pushNamed(context, RATES_OFFERED);
+                              Navigator.pushNamed(context, PRICE_NEGOTIATION);
                             },
                           ),
                           ListTile(
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                             leading: Icon(Icons.assignment_outlined,
                                 color: PRIMARY_COLOR),
                             title: Text(
-                              EVALUATIONS,
+                             LEADS_BREAK_UP,
                               style: AppFontStyle.regularTextStyle2(
                                   APP_BLACK_COLOR,
                                   textSize: 18.0),
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             onTap: (){
 
-                              Navigator.pushNamed(context, EVALUATIONS);
+                              Navigator.pushNamed(context, LEADS_BREAK_UP);
                             },
 
                           ),
@@ -160,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                             leading: Icon(Icons.assignment_late_outlined,
                                 color: PRIMARY_COLOR),
                             title: Text(
-                              EVALUATIONS_NOT_DONE,
+                              CHANNEL_WISE,
                               style: AppFontStyle.regularTextStyle2(
                                   APP_BLACK_COLOR,
                                   textSize: 18.0),
@@ -171,7 +171,45 @@ class _HomePageState extends State<HomePage> {
                             ),
                             onTap: (){
 
-                              Navigator.pushNamed(context, EVALUATIONS_NOT_DONE);
+                              Navigator.pushNamed(context, CHANNEL_WISE);
+                            },
+
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.calendar_today_outlined,
+                                color: PRIMARY_COLOR),
+                            title: Text(
+                              SOURCED,
+                              style: AppFontStyle.regularTextStyle2(
+                                  APP_BLACK_COLOR,
+                                  textSize: 18.0),
+                            ),
+                            trailing: Icon(
+                              Icons.navigate_next,
+                              color: PRIMARY_COLOR,
+                            ),
+                            onTap: (){
+
+                              Navigator.pushNamed(context,SOURCED );
+                            },
+
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.assignment_late_outlined,
+                                color: PRIMARY_COLOR),
+                            title: Text(
+                              DOCUMENTS_PENDING,
+                              style: AppFontStyle.regularTextStyle2(
+                                  APP_BLACK_COLOR,
+                                  textSize: 18.0),
+                            ),
+                            trailing: Icon(
+                              Icons.navigate_next,
+                              color: PRIMARY_COLOR,
+                            ),
+                            onTap: (){
+
+                              Navigator.pushNamed(context, DOCUMENTS_PENDING);
                             },
 
                           ),
@@ -191,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Icon(Icons.add, color: APP_WHITE_COLOR),
                           Text(
-                            "New Enquiry",
+                            "New Case",
                             style:
                             AppFontStyle.regularTextStyle(APP_WHITE_COLOR),
                           )
@@ -278,7 +316,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(
                         top: 8, bottom: 8, left: 8, right: 20),
                     child: Text(
-                      DSE,
+                      EVALUATOR,
                       style: AppFontStyle.regularSmallTextStyle(APP_WHITE_COLOR,
                           textSize: 16.0),
                     ),
@@ -308,28 +346,34 @@ class _HomePageState extends State<HomePage> {
                     style: AppFontStyle.bodyTextStyle2(APP_GREY_COLOR),
                   ),
                   SizedBox(height: LINE_HEIGHT * 2),
-                  Container(
-                    margin: const EdgeInsets.all(15.0),
-                    padding: const EdgeInsets.only(top: 16, bottom: 16),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: PRIMARY_COLOR, ),
-                        borderRadius: BorderRadius.circular(16)
+                  GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, MY_APPOINTMENTS);
 
-                    ),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      },
+                    child: Container(
+                      margin: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.only(top: 16, bottom: 16),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: PRIMARY_COLOR, ),
+                          borderRadius: BorderRadius.circular(16)
 
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.notifications_active_outlined, color: PRIMARY_COLOR,),
-                              SizedBox(width: LINE_HEIGHT,),
-                              Text('You have 3\nappointments today', style: AppFontStyle.labelTextStyle(APP_BLACK_COLOR)),
-                            ],
-                          ),
+                      ),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
 
-                          Icon(Icons.keyboard_arrow_right_outlined, color: PRIMARY_COLOR,)
-                        ]
+                          children: [
+                            Row(
+                              children: [
+                                Icon(Icons.notifications_active_outlined, color: PRIMARY_COLOR,),
+                                SizedBox(width: LINE_HEIGHT,),
+                                Text('You have 3\nappointments today', style: AppFontStyle.labelTextStyle(APP_BLACK_COLOR)),
+                              ],
+                            ),
+
+                            Icon(Icons.keyboard_arrow_right_outlined, color: PRIMARY_COLOR,)
+                          ]
+                      ),
                     ),
                   ),
 
