@@ -1,5 +1,10 @@
 
+import 'package:eval_wire_frame/Provider/CustomerDetailsProvider.dart';
+import 'package:eval_wire_frame/Provider/DocumentDetailProvider.dart';
+import 'package:eval_wire_frame/Provider/ExteriorTyresProvider.dart';
 import 'package:eval_wire_frame/Provider/RegistrationDetailProvider.dart';
+import 'package:eval_wire_frame/Provider/otherDetailsProvider.dart';
+import 'package:eval_wire_frame/Provider/vehicleDetailsProvider.dart';
 import 'package:eval_wire_frame/UI/AddNewCase.dart';
 import 'package:eval_wire_frame/UI/assignedCases.dart';
 import 'package:eval_wire_frame/UI/channelWiseSourcing.dart';
@@ -15,6 +20,7 @@ import 'package:eval_wire_frame/UI/sourced.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'Provider/InsuranceProvider.dart';
 import 'Provider/form_data_provider.dart';
 import 'UI/homePage.dart';
 import 'constants/strings.dart';
@@ -47,7 +53,13 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<FormData>(create: (_)=>FormData()),
-    ChangeNotifierProvider<RegistrationDetailProvider>(create: (_)=>RegistrationDetailProvider())
+    ChangeNotifierProvider<RegistrationDetailProvider>(create: (_)=>RegistrationDetailProvider()),
+        ChangeNotifierProvider<VehicleDetailProvider>(create: (_)=>VehicleDetailProvider()),
+        ChangeNotifierProvider<OtherDetailsProvider>(create: (_)=>OtherDetailsProvider()),
+        ChangeNotifierProvider<CustomerDetailsProvider>(create: (_)=>CustomerDetailsProvider()),
+        ChangeNotifierProvider<InsuranceProvider>(create: (_)=>InsuranceProvider()),
+        ChangeNotifierProvider<DocumentProvider>(create: (_)=>DocumentProvider()),
+        ChangeNotifierProvider<ExteriorTyresProvider>(create: (_)=>ExteriorTyresProvider()),
 
       ],
       child: MaterialApp(

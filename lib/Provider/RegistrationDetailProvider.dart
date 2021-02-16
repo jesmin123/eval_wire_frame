@@ -9,7 +9,15 @@ class RegistrationDetailProvider extends ChangeNotifier{
   String _dateOfReg;
   String _taxType;
   String _taxValidity;
+  String _ownershipComment;
 
+
+  String get ownershipComment => _ownershipComment;
+
+  set ownershipComment(String value) {
+    _ownershipComment = value;
+    notifyListeners();
+  }
 
   String get taxValidity => _taxValidity;
 
