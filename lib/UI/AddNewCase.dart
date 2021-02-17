@@ -7,6 +7,7 @@ import 'package:eval_wire_frame/widgets/ExteriorTyres.dart';
 import 'package:eval_wire_frame/widgets/InsuranceDetails.dart';
 import 'package:eval_wire_frame/widgets/Registration_Details.dart';
 import 'package:eval_wire_frame/widgets/appBar.dart';
+import 'package:eval_wire_frame/widgets/electricals.dart';
 import 'package:eval_wire_frame/widgets/otherDetails.dart';
 import 'package:eval_wire_frame/widgets/vehicleDetails.dart';
 import 'package:fa_stepper/fa_stepper.dart';
@@ -62,6 +63,8 @@ class _AddNewCaseState extends State<AddNewCase> {
               FAStep(state: formData.activeStep>4?FAStepstate.complete:FAStepstate.editing,title: Text("Insurance Details"), content: InsuranceDetails(), isActive: formData.stepCount==4),
               FAStep(state: formData.activeStep>5?FAStepstate.complete:FAStepstate.editing,title: Text("Document Details"), content: DocumentDetail(), isActive: formData.stepCount==5),
               FAStep(state: formData.activeStep>6?FAStepstate.complete:FAStepstate.editing,title: Text("Exterior + Tyres"), content: ExteriorTyres(), isActive: formData.stepCount==6),
+              FAStep(state: formData.activeStep>7?FAStepstate.complete:FAStepstate.editing,title: Text("Electrical + Interior"), content: Electricals(), isActive: formData.stepCount==7),
+              FAStep(state: formData.activeStep>8?FAStepstate.complete:FAStepstate.editing,title: Text("Engine + Transmission + AC"), content: Electricals(), isActive: formData.stepCount==8),
 
             ],
             controlsBuilder: (BuildContext context ,{VoidCallback onStepContinue, VoidCallback onStepCancel})=> Container(),

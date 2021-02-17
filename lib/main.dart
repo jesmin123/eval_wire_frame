@@ -1,6 +1,7 @@
 
 import 'package:eval_wire_frame/Provider/CustomerDetailsProvider.dart';
 import 'package:eval_wire_frame/Provider/DocumentDetailProvider.dart';
+import 'package:eval_wire_frame/Provider/ElectricalProvider.dart';
 import 'package:eval_wire_frame/Provider/ExteriorTyresProvider.dart';
 import 'package:eval_wire_frame/Provider/RegistrationDetailProvider.dart';
 import 'package:eval_wire_frame/Provider/otherDetailsProvider.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<InsuranceProvider>(create: (_)=>InsuranceProvider()),
         ChangeNotifierProvider<DocumentProvider>(create: (_)=>DocumentProvider()),
         ChangeNotifierProvider<ExteriorTyresProvider>(create: (_)=>ExteriorTyresProvider()),
+        ChangeNotifierProvider<ElectricProvider>(create: (_)=>ElectricProvider()),
 
       ],
       child: MaterialApp(
