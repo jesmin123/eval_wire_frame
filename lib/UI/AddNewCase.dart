@@ -1,14 +1,19 @@
 import 'package:eval_wire_frame/Provider/form_data_provider.dart';
 import 'package:eval_wire_frame/constants/app_font_style.dart';
 import 'package:eval_wire_frame/constants/colors.dart';
+import 'package:eval_wire_frame/widgets/AcessoryDetails.dart';
 import 'package:eval_wire_frame/widgets/CustomerDetails.dart';
 import 'package:eval_wire_frame/widgets/DocumentDetail.dart';
+import 'package:eval_wire_frame/widgets/Documents.dart';
 import 'package:eval_wire_frame/widgets/ExteriorTyres.dart';
 import 'package:eval_wire_frame/widgets/InsuranceDetails.dart';
 import 'package:eval_wire_frame/widgets/Registration_Details.dart';
+import 'package:eval_wire_frame/widgets/RfCostSummary.dart';
 import 'package:eval_wire_frame/widgets/appBar.dart';
 import 'package:eval_wire_frame/widgets/electricals.dart';
+import 'package:eval_wire_frame/widgets/engine_transmission.dart';
 import 'package:eval_wire_frame/widgets/otherDetails.dart';
+import 'package:eval_wire_frame/widgets/steering_suspension.dart';
 import 'package:eval_wire_frame/widgets/vehicleDetails.dart';
 import 'package:fa_stepper/fa_stepper.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +69,11 @@ class _AddNewCaseState extends State<AddNewCase> {
               FAStep(state: formData.activeStep>5?FAStepstate.complete:FAStepstate.editing,title: Text("Document Details"), content: DocumentDetail(), isActive: formData.stepCount==5),
               FAStep(state: formData.activeStep>6?FAStepstate.complete:FAStepstate.editing,title: Text("Exterior + Tyres"), content: ExteriorTyres(), isActive: formData.stepCount==6),
               FAStep(state: formData.activeStep>7?FAStepstate.complete:FAStepstate.editing,title: Text("Electrical + Interior"), content: Electricals(), isActive: formData.stepCount==7),
-              FAStep(state: formData.activeStep>8?FAStepstate.complete:FAStepstate.editing,title: Text("Engine + Transmission + AC"), content: Electricals(), isActive: formData.stepCount==8),
+              FAStep(state: formData.activeStep>8?FAStepstate.complete:FAStepstate.editing,title: Text("Engine + Transmission + AC"), content: EngineTransmission(), isActive: formData.stepCount==8),
+              FAStep(state: formData.activeStep>9?FAStepstate.complete:FAStepstate.editing,title: Text("Steering + Suspension + Brakes"), content: SteeringSuspension(), isActive: formData.stepCount==9),
+              FAStep(state: formData.activeStep>10?FAStepstate.complete:FAStepstate.editing,title: Text("RF Cost Summary"), content: RfCost(), isActive: formData.stepCount==10),
+              FAStep(state: formData.activeStep>11?FAStepstate.complete:FAStepstate.editing,title: Text("Accessory Details"), content: AccessoryDetails(), isActive: formData.stepCount==11),
+              FAStep(state: formData.activeStep>12?FAStepstate.complete:FAStepstate.editing,title: Text("Documents"), content: Documents(), isActive: formData.stepCount==12),
 
             ],
             controlsBuilder: (BuildContext context ,{VoidCallback onStepContinue, VoidCallback onStepCancel})=> Container(),

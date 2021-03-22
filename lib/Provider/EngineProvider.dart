@@ -4,9 +4,28 @@ class EngineProvider extends ChangeNotifier{
 
 
   Map<String,dynamic> _engine={
-    "":0,
+    "engine":0,
+    "battery":0,
+    "engineOilLevel":0,
+    "engineOil":0,
+    "coolant":0,
+    "em":0,
+    "es":0,
+    "eSmoke":0,
+    "ep":0,
+    "ac":0,
+    "heater":0,
+    "cc":0,
 
   };
+  double _rating;
+
+  double get rating => _rating;
+
+  set rating(double value) {
+    _rating = value;
+    notifyListeners();
+  }
 
   Map<String, dynamic> get engine => _engine;
 

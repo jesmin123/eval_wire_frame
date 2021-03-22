@@ -1,9 +1,12 @@
 
+import 'package:eval_wire_frame/Provider/AccessoryProvider.dart';
 import 'package:eval_wire_frame/Provider/CustomerDetailsProvider.dart';
 import 'package:eval_wire_frame/Provider/DocumentDetailProvider.dart';
 import 'package:eval_wire_frame/Provider/ElectricalProvider.dart';
+import 'package:eval_wire_frame/Provider/EngineProvider.dart';
 import 'package:eval_wire_frame/Provider/ExteriorTyresProvider.dart';
 import 'package:eval_wire_frame/Provider/RegistrationDetailProvider.dart';
+import 'package:eval_wire_frame/Provider/SteeringProvider.dart';
 import 'package:eval_wire_frame/Provider/otherDetailsProvider.dart';
 import 'package:eval_wire_frame/Provider/vehicleDetailsProvider.dart';
 import 'package:eval_wire_frame/UI/AddNewCase.dart';
@@ -62,6 +65,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<DocumentProvider>(create: (_)=>DocumentProvider()),
         ChangeNotifierProvider<ExteriorTyresProvider>(create: (_)=>ExteriorTyresProvider()),
         ChangeNotifierProvider<ElectricProvider>(create: (_)=>ElectricProvider()),
+        ChangeNotifierProvider<EngineProvider>(create: (_)=>EngineProvider()),
+        ChangeNotifierProvider<SteeringProvider>(create: (_)=>SteeringProvider()),
+        ChangeNotifierProvider<AccessoryProvider>(create: (_)=>AccessoryProvider()),
 
       ],
       child: MaterialApp(
