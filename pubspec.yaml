@@ -37,6 +37,7 @@ dependencies:
   fa_stepper: ^0.0.2
   provider: ^4.3.3
   flutter_rating_bar: ^3.2.0+1
+  file_picker: ^2.0.0
 
 dev_dependencies:
   flutter_test:

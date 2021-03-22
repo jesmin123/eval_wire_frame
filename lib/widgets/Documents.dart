@@ -1,7 +1,12 @@
 
+import 'dart:io';
+
+import 'package:eval_wire_frame/Provider/form_data_provider.dart';
 import 'package:eval_wire_frame/constants/app_font_style.dart';
 import 'package:eval_wire_frame/constants/colors.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Documents extends StatefulWidget {
   @override
@@ -11,6 +16,7 @@ class Documents extends StatefulWidget {
 class _DocumentsState extends State<Documents> {
   @override
   Widget build(BuildContext context) {
+    FormData formData=Provider.of(context);
     return Column(
       children: [
         Card(color: Colors.white,
@@ -19,7 +25,20 @@ class _DocumentsState extends State<Documents> {
             children: [
               ListTile(
                 title: Text('RC BOOK'),
-                trailing: Icon(Icons.upload_outlined),tileColor: Colors.white,
+                trailing: IconButton(icon: Icon(Icons.upload_outlined), onPressed: ()async{
+                  FilePickerResult result = await FilePicker.platform.pickFiles(
+                    type: FileType.custom,
+                    allowedExtensions: ["doc",'pdf'],
+                  );
+
+                  if(result != null) {
+                    File file = File(result.files.single.path);
+                  } else {
+                    // User canceled the picker
+                  }
+
+                }),
+                tileColor: Colors.white,
               ),
               Divider(thickness: 1,indent: 10,endIndent: 10,),
               ListTile(
@@ -35,7 +54,7 @@ class _DocumentsState extends State<Documents> {
               children: [
                 ListTile(
                   title: Text('Insurance'),
-                  trailing: Icon(Icons.upload_outlined),tileColor: Colors.white,
+                  trailing: IconButton(icon: Icon(Icons.upload_outlined), onPressed: (){}),tileColor: Colors.white,
                 ),
                 Divider(thickness: 1,indent: 10,endIndent: 10,),
                 ListTile(
@@ -50,8 +69,8 @@ class _DocumentsState extends State<Documents> {
             child: Column(
               children: [
                 ListTile(
-                  title: Text('Vehicle Photos-8 Nos'),
-                  trailing: Icon(Icons.upload_outlined),tileColor: Colors.white,
+                  title: Text('Vehicle Photos - 8 Nos'),
+                  trailing: IconButton(icon: Icon(Icons.upload_outlined), onPressed: (){}),tileColor: Colors.white,
                 ),
                 Divider(thickness: 1,indent: 10,endIndent: 10,),
                 ListTile(
@@ -67,7 +86,7 @@ class _DocumentsState extends State<Documents> {
               children: [
                 ListTile(
                   title: Text('Pollution Free'),
-                  trailing: Icon(Icons.upload_outlined),tileColor: Colors.white,
+                  trailing: IconButton(icon: Icon(Icons.upload_outlined), onPressed: (){}),tileColor: Colors.white,
                 ),
                 Divider(thickness: 1,indent: 10,endIndent: 10,),
                 ListTile(
@@ -83,7 +102,7 @@ class _DocumentsState extends State<Documents> {
               children: [
                 ListTile(
                   title: Text('Vin Plate'),
-                  trailing: Icon(Icons.upload_outlined),tileColor: Colors.white,
+                  trailing: IconButton(icon: Icon(Icons.upload_outlined), onPressed: (){}),tileColor: Colors.white,
                 ),
                 Divider(thickness: 1,indent: 10,endIndent: 10,),
                 ListTile(
@@ -92,7 +111,19 @@ class _DocumentsState extends State<Documents> {
               ],
             )
         ),
-        SizedBox(height: 6,),
+        SizedBox(height: 10,),
+        GestureDetector(
+          onTap: (){
+            formData.activeStep = 13;
+            formData.stepCount=13;
+          },
+          child: Container(
+            height:60 ,
+            width: 60,
+            decoration: BoxDecoration(shape: BoxShape.circle,color: PRIMARY_COLOR,),
+            child: Icon(Icons.arrow_forward_ios_outlined,color: APP_WHITE_COLOR,),
+          ),
+        )
       ],
     );
   }

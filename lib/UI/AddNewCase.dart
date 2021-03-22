@@ -5,6 +5,7 @@ import 'package:eval_wire_frame/widgets/AcessoryDetails.dart';
 import 'package:eval_wire_frame/widgets/CustomerDetails.dart';
 import 'package:eval_wire_frame/widgets/DocumentDetail.dart';
 import 'package:eval_wire_frame/widgets/Documents.dart';
+import 'package:eval_wire_frame/widgets/EvaluationDetails.dart';
 import 'package:eval_wire_frame/widgets/ExteriorTyres.dart';
 import 'package:eval_wire_frame/widgets/InsuranceDetails.dart';
 import 'package:eval_wire_frame/widgets/Registration_Details.dart';
@@ -74,6 +75,7 @@ class _AddNewCaseState extends State<AddNewCase> {
               FAStep(state: formData.activeStep>10?FAStepstate.complete:FAStepstate.editing,title: Text("RF Cost Summary"), content: RfCost(), isActive: formData.stepCount==10),
               FAStep(state: formData.activeStep>11?FAStepstate.complete:FAStepstate.editing,title: Text("Accessory Details"), content: AccessoryDetails(), isActive: formData.stepCount==11),
               FAStep(state: formData.activeStep>12?FAStepstate.complete:FAStepstate.editing,title: Text("Documents"), content: Documents(), isActive: formData.stepCount==12),
+              FAStep(state: formData.activeStep>13?FAStepstate.complete:FAStepstate.editing,title: Text("Evaluation Details"), content: EvaluationDetails(), isActive: formData.stepCount==13),
 
             ],
             controlsBuilder: (BuildContext context ,{VoidCallback onStepContinue, VoidCallback onStepCancel})=> Container(),

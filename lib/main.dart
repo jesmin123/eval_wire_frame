@@ -24,6 +24,7 @@ import 'package:eval_wire_frame/UI/sourced.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'Provider/EvaluationDetailProvider.dart';
 import 'Provider/InsuranceProvider.dart';
 import 'Provider/form_data_provider.dart';
 import 'UI/homePage.dart';
@@ -68,6 +69,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<EngineProvider>(create: (_)=>EngineProvider()),
         ChangeNotifierProvider<SteeringProvider>(create: (_)=>SteeringProvider()),
         ChangeNotifierProvider<AccessoryProvider>(create: (_)=>AccessoryProvider()),
+        ChangeNotifierProvider<EvaluationDetailProvider>(create: (_)=>EvaluationDetailProvider()),
 
       ],
       child: MaterialApp(
