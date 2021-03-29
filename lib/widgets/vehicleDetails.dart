@@ -32,15 +32,15 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Flexible(flex: 1,child: Text('Manufacturer:')),
+              Flexible(flex: 1,child: Text('Make:')),
               Flexible(flex: 1,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
-                  hintText: 'Manufacturer',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+                  hintText: 'Make',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                 ),
                 items: [
                   DropdownMenuItem(
-                    child: Text('Maruti Suzuki'),value: "maruti Suzuki",),
+                    child: Text('Maruti'),value: "Maruti",),
                   DropdownMenuItem(
                     child: Text('hjjk'),value: "jkl",),
                   DropdownMenuItem(
@@ -65,7 +65,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
                 ),
                 items: [
                   DropdownMenuItem(
-                    child: Text('Maruti Suzuki'),value: "maruti Suzuki",),
+                    child: Text('Maruti'),value: "maruti",),
                   DropdownMenuItem(
                     child: Text('hjjk'),value: "jkl",),
                   DropdownMenuItem(

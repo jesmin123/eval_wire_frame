@@ -142,9 +142,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                   DropdownMenuItem(
                     child: Text('DMS'),value: "DMS",),
                   DropdownMenuItem(child: Text('CRC'),value: "CRC",),
-                  DropdownMenuItem(child: Text('Self Generated'),value: "Self Generated",),
-
-
+                  DropdownMenuItem(child: Text('Self Gen'),value: "Self Generated",),
                 ],
                 onChanged: (value){
                   customerDetailsProvider.sourceName = value;
@@ -166,10 +164,17 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 ),
                 items: [
                   DropdownMenuItem(
-                    child: Text('20-30'),value: "20",),
+                    child: Text('Arena'),value: "20",),
                   DropdownMenuItem(
-                    child: Text('30-40'),value: "30",),
-
+                    child: Text('Nexa'),value: "30",),
+                  DropdownMenuItem(
+                    child: Text('Comercial'),value: "20",),
+                  DropdownMenuItem(
+                    child: Text('MTV'),value: "30",),
+                  DropdownMenuItem(
+                    child: Text('Direct'),value: "20",),
+                  DropdownMenuItem(
+                    child: Text('Others'),value: "30",),
 
                 ],
                 onChanged: (value){
@@ -206,7 +211,6 @@ class _CustomerDetailsState extends State<CustomerDetails> {
         return Column(
           children: [
             SizedBox(height: 10,),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -224,7 +228,6 @@ class _CustomerDetailsState extends State<CustomerDetails> {
         return Column(
           children: [
             SizedBox(height: 10,),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -241,7 +244,6 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     DropdownMenuItem(child: Text("GMB"),value: "GMB",),
                     DropdownMenuItem(child: Text("Hyper Local"),value: "Hyper Local",),
                     DropdownMenuItem(child: Text("Employee Referrals"),value: "Employee Referrals",),
-
                   ],
                   onChanged: (val){
                     customerDetailProvider.cRc=val;
@@ -249,6 +251,78 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 ),),
               ],
             ),
+            SizedBox(height:8),
+            customerDetailProvider.cRc=="OLX"?Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(flex: 1,child: Text('OLX ID No')),
+                Flexible(flex: 1,child: TextFormField(
+                  controller: _emailTextEditingController,
+                  validator: (value) => value.isEmpty? 'this field is required' : null,
+                  decoration: FormBorder.myDecoration(),
+                  autofocus: false,
+                ),)
+
+              ],
+            ):Container(),
+            customerDetailProvider.cRc=="Employee Referrals"? Column(
+              children: [
+                SizedBox(height:8),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child:Text('Ref Name')),
+                    Flexible(flex: 1,child: TextFormField(
+                      controller: _emailTextEditingController,
+                      validator: (value) => value.isEmpty? 'this field is required' : null,
+                      decoration: FormBorder.myDecoration(),
+                      autofocus: false,
+                    ),)
+
+                  ],
+                ),
+                SizedBox(height:8),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child: Text('Ref. Ph. No')),
+                    Flexible(flex: 1,child: TextFormField(
+                      controller: _emailTextEditingController,
+                      validator: (value) => value.isEmpty? 'this field is required' : null,
+                      decoration: FormBorder.myDecoration(),
+                      autofocus: false,
+                    ),)
+
+                  ],
+                ),
+                SizedBox(height:8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child: Text("Source Division"),),
+                    Flexible(flex: 2,child: DropdownButtonFormField(
+                      decoration: FormBorder.myDecoration(),
+                      items: [
+                        DropdownMenuItem(child: Text("Val 1"),value: "v1",),
+                        DropdownMenuItem(child: Text("Val 2"),value: "v2",),
+                      ],
+                      onChanged: (val){
+                      },
+                    ),),
+                  ],
+                ),
+                SizedBox(height:8),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child:  Text('Location')),
+                    Flexible(flex: 1,child: TextFormField(
+                      controller: _emailTextEditingController,
+                      validator: (value) => value.isEmpty? 'this field is required' : null,
+                      decoration: FormBorder.myDecoration(),
+                      autofocus: false,
+                    ),)
+
+                  ],
+                ),
+              ],
+            ):Container(),
           ],
         );
         break;
@@ -256,7 +330,6 @@ class _CustomerDetailsState extends State<CustomerDetails> {
         return Column(
           children: [
             SizedBox(height: 10,),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -272,14 +345,73 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     DropdownMenuItem(child: Text("Customer Referrals"),value: "Customer Referrals",),
                     DropdownMenuItem(child: Text("Other Social Media"),value: "Other Social Media",),
                     DropdownMenuItem(child: Text("Other Dealers"),value: "Other Dealers",),
-
                   ],
-                  onChanged: (val){
-customerDetailProvider.selfGenerated=val;
+                  onChanged: (val){customerDetailProvider.selfGenerated=val;
                   },
                 ),),
               ],
             ),
+            SizedBox(height:8),
+            customerDetailProvider.cRc!="null"?
+            Column(
+              children: [
+                SizedBox(height:8),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child: customerDetailProvider.selfGenerated=="OLX"?Text('OLX ID'):Text('Ref Name')),
+                    Flexible(flex: 1,child: TextFormField(
+                      controller: _emailTextEditingController,
+                      validator: (value) => value.isEmpty? 'this field is required' : null,
+                      decoration: FormBorder.myDecoration(),
+                      autofocus: false,
+                    ),)
+
+                  ],
+                ),
+                SizedBox(height:8),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child: Text('Ref. Ph. No')),
+                    Flexible(flex: 1,child: TextFormField(
+                      controller: _emailTextEditingController,
+                      validator: (value) => value.isEmpty? 'this field is required' : null,
+                      decoration: FormBorder.myDecoration(),
+                      autofocus: false,
+                    ),)
+
+                  ],
+                ),
+                SizedBox(height:8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child: Text("Source Division"),),
+                    Flexible(flex: 2,child: DropdownButtonFormField(
+                      decoration: FormBorder.myDecoration(),
+                      items: [
+                        DropdownMenuItem(child: Text("Val 1"),value: "v1",),
+                        DropdownMenuItem(child: Text("Val 2"),value: "v2",),
+                      ],
+                      onChanged: (val){
+                      },
+                    ),),
+                  ],
+                ),
+                SizedBox(height:8),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(flex: 1,child:  customerDetailProvider.selfGenerated=="Other Dealers"?Text('Dealer Name'):Text('Location')),
+                    Flexible(flex: 1,child: TextFormField(
+                      controller: _emailTextEditingController,
+                      validator: (value) => value.isEmpty? 'this field is required' : null,
+                      decoration: FormBorder.myDecoration(),
+                      autofocus: false,
+                    ),)
+
+                  ],
+                ),
+              ],
+            ):Container(),
           ],
         );
         break;

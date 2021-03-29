@@ -77,7 +77,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
                    DropdownMenuItem(
                       child: Text('6th Owner'),value: "6th Owner",),
                       DropdownMenuItem(
-                        child: Text('Other'),value: "Other",),
+                        child: Text('More than 6'),value: "Other",),
 
                 ],
                   onChanged: (value){
