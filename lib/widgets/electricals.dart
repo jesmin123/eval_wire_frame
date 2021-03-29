@@ -99,7 +99,7 @@ class _ElectricalsState extends State<Electricals> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text("$text",style: AppFontStyle.regularTextStyle2(APP_BLACK_COLOR),)),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 Radio(value: "Ok", groupValue: electricProvider.electricRadio[groupValue], onChanged: (val)=>electricProvider.updateRadio(groupValue, val),activeColor: PRIMARY_COLOR,),
                 Text("Ok"),

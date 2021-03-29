@@ -136,7 +136,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text("Pillar",style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),)),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 Radio(value: "Ok", groupValue: exteriorTyresProvider.exterior["Pillar"], onChanged: (val)=>exteriorTyresProvider.updateKey("Pillar", val),activeColor: PRIMARY_COLOR,),
                 Text("Ok"),
@@ -260,7 +260,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text("Battery",style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),)),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 Radio(value: "Ok", groupValue: exteriorTyresProvider.exterior["Battery"], onChanged: (val)=>exteriorTyresProvider.updateKey("Battery", val),activeColor: PRIMARY_COLOR,),
                 Text("Ok"),
@@ -343,7 +343,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Flexible(flex: 1,child: Text("$text",style: AppFontStyle.regularTextStyle2(APP_BLACK_COLOR),)),
-        Flexible(flex: 1,child: Row(
+        Flexible(flex: 2,child: Row(
           children: [
             Radio(value: "Ok", groupValue: exteriorTyresProvider.exterior[groupValue], onChanged: (val)=>exteriorTyresProvider.updateKey(groupValue, val),activeColor: PRIMARY_COLOR,),
             Text("Ok"),
@@ -395,7 +395,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Make:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: FormBorder.myDecoration(),
                 items: [
                   DropdownMenuItem(value: "make",child: Text("make")),
@@ -411,7 +411,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Thread %:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: FormBorder.myDecoration(),
                 items: [
                   DropdownMenuItem(value: "0%",child: Text("0%")),

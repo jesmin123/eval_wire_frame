@@ -31,7 +31,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Name on RC:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _nameTextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -44,7 +44,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Profession:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _professionTextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -57,7 +57,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Phone No 1:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _phone1TextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -70,7 +70,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Phone No 2:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _phone2TextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -83,7 +83,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Adress:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _adressTextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -96,7 +96,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('E mail:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _emailTextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -109,7 +109,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Age Group:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   hintText: 'Age Group',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -133,7 +133,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Source Name:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   hintText: ' ',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -166,12 +166,12 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 ),
                 items: [
                   DropdownMenuItem(
-                    child: Text('Arena Exchange'),value: "Arena Exchange",),
-                  DropdownMenuItem(child: Text('Nexa Exchange'),value: "Nexa Exchange",),
-                  DropdownMenuItem(child: Text('Commercial Exchange'),value: "Commercial Exchange",),
-                  DropdownMenuItem(child: Text('MTV Exchange'),value: "MTV Exchange",),
-                  DropdownMenuItem(child: Text('Direct Exchange'),value: "Direct Exchange",),
-                  DropdownMenuItem(child: Text('Others'),value: "Others",),
+                    child: Text('Arena Exchange',style: TextStyle(fontSize: 10),),value: "Arena Exchange",),
+                  DropdownMenuItem(child: Text('Nexa Exchange',style: TextStyle(fontSize: 10)),value: "Nexa Exchange",),
+                  DropdownMenuItem(child: Text('Commercial Exchange',style: TextStyle(fontSize: 10)),value: "Commercial Exchange",),
+                  DropdownMenuItem(child: Text('MTV Exchange',style: TextStyle(fontSize: 10)),value: "MTV Exchange",),
+                  DropdownMenuItem(child: Text('Direct Exchange',style: TextStyle(fontSize: 10)),value: "Direct Exchange",),
+                  DropdownMenuItem(child: Text('Others',style: TextStyle(fontSize: 10)),value: "Others",),
 
 
                 ],

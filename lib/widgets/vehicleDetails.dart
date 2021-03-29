@@ -33,7 +33,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Manufacturer:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   hintText: 'Manufacturer',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -59,7 +59,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Model:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                 ),
@@ -84,7 +84,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Variant:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _varientTextEditingController,
 
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
@@ -98,7 +98,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Year:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _yearTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -111,7 +111,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Seating Capacity:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _seatingCapacityTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -124,7 +124,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Color:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _colorTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -137,7 +137,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Kms:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _kmsTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -150,7 +150,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Flexible(flex: 1,child: Text('Fuel:')),
-          Flexible(flex: 1,child: DropdownButtonFormField(
+          Flexible(flex: 2,child: DropdownButtonFormField(
             decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
               focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
               hintText: 'Fuel',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -178,7 +178,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Transmission:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                    hintText: 'Transmission',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -206,7 +206,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Emission:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _emissionTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -219,7 +219,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Engine CC:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _engineCCTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -232,7 +232,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Chasis No:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _chasisNoTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -245,7 +245,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Engine No:')),
-              Flexible(flex: 1,child: TextFormField(
+              Flexible(flex: 2,child: TextFormField(
                 controller: _engineNoTextEditingController,
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 decoration: FormBorder.myDecoration(),
@@ -258,7 +258,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('VIN Plate:')),
-              Flexible(flex: 1,child: Row(
+              Flexible(flex: 2,child: Row(
                 children: [
                   new Radio(value: "Yes", groupValue: vehicleDetailProvider.vinPlate, onChanged: (val)=>vehicleDetailProvider.vinPlate=val,activeColor: PRIMARY_COLOR,),
                   Text('Yes'),
@@ -275,7 +275,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('External CNG/LPG:')),
-              Flexible(flex: 1,child: Row(
+              Flexible(flex: 2,child: Row(
                 children: [
                   new Radio(value: "Yes", groupValue: vehicleDetailProvider.externalCng, onChanged: (val)=>vehicleDetailProvider.externalCng=val,activeColor: PRIMARY_COLOR,),
                   Text('Yes'),
@@ -291,7 +291,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Vehicle Type:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   hintText: 'Vehicle type',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -317,7 +317,7 @@ GlobalKey<FormState> _formKey=GlobalKey<FormState>();
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Enquiry No (DMS No):')),
-              Flexible(flex: 1,child:TextFormField(
+              Flexible(flex: 2,child:TextFormField(
                 validator: (value) => value.isEmpty ? 'this field is required' : null,
                 controller: _enquiryNoTextEditingController,
                 decoration: FormBorder.myDecoration(),

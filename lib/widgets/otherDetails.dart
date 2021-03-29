@@ -19,7 +19,7 @@ class _OtherDetailsState extends State<OtherDetails> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('RC Book:')),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 new Radio(value: "Yes", groupValue: otherDetailsProvider.rcBook, onChanged: (val)=>otherDetailsProvider.rcBook=val,activeColor: PRIMARY_COLOR,),
                 Text('Yes'),
@@ -36,7 +36,7 @@ class _OtherDetailsState extends State<OtherDetails> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Original Invoice:')),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 new Radio(value: "Yes", groupValue: otherDetailsProvider.originalInvoice, onChanged: (val)=>otherDetailsProvider.originalInvoice=val,activeColor: PRIMARY_COLOR,),
                 Text('Yes'),
@@ -53,7 +53,7 @@ class _OtherDetailsState extends State<OtherDetails> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Insurance:')),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 new Radio(value: "Yes", groupValue: otherDetailsProvider.insurance, onChanged: (val)=>otherDetailsProvider.insurance=val,activeColor: PRIMARY_COLOR,),
                 Text('Yes'),
@@ -70,7 +70,7 @@ class _OtherDetailsState extends State<OtherDetails> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('EW/TV Warranty:')),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 new Radio(value: "Yes", groupValue: otherDetailsProvider.warranty, onChanged: (val)=>otherDetailsProvider.warranty=val,activeColor: PRIMARY_COLOR,),
                 Text('Yes'),
@@ -87,7 +87,7 @@ class _OtherDetailsState extends State<OtherDetails> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('HP Entry:')),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 new Radio(value: "Yes", groupValue: otherDetailsProvider.entry, onChanged: (val)=>otherDetailsProvider.entry=val,activeColor: PRIMARY_COLOR,),
                 Text('Yes'),
