@@ -131,59 +131,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
         SizedBox(height: 6,),
         exteriorTyres("RHS Rear", exteriorTyresProvider, "DoorRHSRear", _doorRhsRearCost, _doorRhsRearComment),
         SizedBox(height: 6,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(flex: 1,child: Text("Battery",style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),)),
-            Flexible(flex: 1,child: Row(
-              children: [
-                Radio(value: "Ok", groupValue: exteriorTyresProvider.exterior["Battery"], onChanged: (val)=>exteriorTyresProvider.updateKey("Battery", val),activeColor: PRIMARY_COLOR,),
-                Text("Ok"),
-                Radio(value: "Not Ok", groupValue: exteriorTyresProvider.exterior["Battery"], onChanged: (val)=>exteriorTyresProvider.updateKey("Battery", val),activeColor: PRIMARY_COLOR,),
-                Text("Not Ok"),
-              ],
-            ))
-          ],
-        ),
-        SizedBox(height: 6,),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(flex: 1,child: Text('Make:')),
-            Flexible(flex: 1,child: TextFormField(
-              controller: _batteryMake,
-              validator: (value) => value.isEmpty? 'this field is required' : null,
-              decoration: FormBorder.myDecoration(),
-              autofocus: false,
-            ),)
 
-          ],
-        ),
-        SizedBox(height: 6,),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(flex: 1,child: Text('Warranty period:')),
-            Flexible(flex: 1,child: TextFormField(
-              controller: _batteryWarranty,
-              validator: (value) => value.isEmpty? 'this field is required' : null,
-              decoration: FormBorder.myDecoration(),
-              autofocus: false,
-            ),)
-
-          ],
-        ),
-        SizedBox(height: 6,),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Flexible(flex: 1,child: Text('Comment:')),
-            Flexible(flex: 1,child: TextFormField(
-              controller: _batteryComment,
-              validator: (value) => value.isEmpty? 'this field is required' : null,
-              decoration: FormBorder.myDecoration(),
-              autofocus: false,
-            ),)
-
-          ],
-        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -307,6 +255,60 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
         exteriorTyres2("RHS Rear Tyre", exteriorTyresProvider, "rhsRearMake", 'rhsRearThread'),
         SizedBox(height: 10,),
         exteriorTyres2("Spare Tyre", exteriorTyresProvider, "spareMake", 'spareThread'),
+        SizedBox(height: 10,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(flex: 1,child: Text("Battery",style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),)),
+            Flexible(flex: 1,child: Row(
+              children: [
+                Radio(value: "Ok", groupValue: exteriorTyresProvider.exterior["Battery"], onChanged: (val)=>exteriorTyresProvider.updateKey("Battery", val),activeColor: PRIMARY_COLOR,),
+                Text("Ok"),
+                Radio(value: "Not Ok", groupValue: exteriorTyresProvider.exterior["Battery"], onChanged: (val)=>exteriorTyresProvider.updateKey("Battery", val),activeColor: PRIMARY_COLOR,),
+                Text("Not Ok"),
+              ],
+            ))
+          ],
+        ),
+        SizedBox(height: 6,),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(flex: 1,child: Text('Make:')),
+            Flexible(flex: 1,child: TextFormField(
+              controller: _batteryMake,
+              validator: (value) => value.isEmpty? 'this field is required' : null,
+              decoration: FormBorder.myDecoration(),
+              autofocus: false,
+            ),)
+
+          ],
+        ),
+        SizedBox(height: 6,),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(flex: 1,child: Text('Warranty period:')),
+            Flexible(flex: 1,child: TextFormField(
+              controller: _batteryWarranty,
+              validator: (value) => value.isEmpty? 'this field is required' : null,
+              decoration: FormBorder.myDecoration(),
+              autofocus: false,
+            ),)
+
+          ],
+        ),
+        SizedBox(height: 6,),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(flex: 1,child: Text('Comment:')),
+            Flexible(flex: 1,child: TextFormField(
+              controller: _batteryComment,
+              validator: (value) => value.isEmpty? 'this field is required' : null,
+              decoration: FormBorder.myDecoration(),
+              autofocus: false,
+            ),)
+
+          ],
+        ),
         SizedBox(height: 20,),
         Row(
           children: [
@@ -316,6 +318,7 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
           ],
         ),
         SizedBox(height: 10,),
+
         GestureDetector(
           onTap: (){
             formData.activeStep = 7;
