@@ -51,7 +51,7 @@ class _LeadsBreakUpState extends State<LeadsBreakUp> {
 
                   children: <Widget>[
                     ListTile(
-                        leading: Text(DEAL_OK_CASE,style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
+                        leading: Text("Evaluated Cases",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
                     ),
                     Divider(),
                     ListTile(
@@ -75,50 +75,7 @@ class _LeadsBreakUpState extends State<LeadsBreakUp> {
                     ),
                     Divider(),
                     ListTile(
-                      title: Text("45 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
-                      trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR),
-                    ), ],
-
-                )
-            ),
-            SizedBox(height: 6,),
-
-            Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-
-                  borderRadius: BorderRadius.circular(10),
-                  // side: BorderSide(width: 0.25,color: APP_BLACK_COLOR,)
-                ),
-                child: Column(
-
-                  children: <Widget>[
-                    ListTile(
-                        leading: Text("Fund Transfered",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
-                    ),
-                    Divider(),
-                    ListTile(
-                      title: Text("3 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
-                      trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR,),
-                    ), ],
-
-                )),
-            SizedBox(height: 6,),
-            Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  // side: BorderSide(width: 1,color: APP_BLACK_COLOR,)
-                ),
-                child: Column(
-
-                  children: <Widget>[
-                    ListTile(
-                        leading: Text("Sourced",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
-                    ),
-                    Divider(),
-                    ListTile(
-                      title: Text("1 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
+                      title: Text("12 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
                       trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR),
                     ), ],
 
@@ -134,7 +91,28 @@ class _LeadsBreakUpState extends State<LeadsBreakUp> {
 
                   children: <Widget>[
                     ListTile(
-                        leading: Text("Price not quoted",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
+                        leading: Text(DEAL_OK_CASE,style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text("12 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
+                      trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR),
+                    ), ],
+
+                )),
+            SizedBox(height: 6,),
+
+            Card(
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  // side: BorderSide(width: 1,color: APP_BLACK_COLOR,)
+                ),
+                child: Column(
+
+                  children: <Widget>[
+                    ListTile(
+                        leading: Text("Sourced Cases",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
                     ),
                     Divider(),
                     ListTile(
@@ -155,6 +133,66 @@ class _LeadsBreakUpState extends State<LeadsBreakUp> {
                   children: <Widget>[
                     ListTile(
                         leading: Text(JUNK_LEADS,style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text("1 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
+                      trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR),
+                    ), ],
+
+                )),
+            SizedBox(height: 6,),
+            Card(
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  // side: BorderSide(width: 1,color: APP_BLACK_COLOR,)
+                ),
+                child: Column(
+
+                  children: <Widget>[
+                    ListTile(
+                        leading: Text(RATES_OFFERED,style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text("1 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
+                      trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR),
+                    ), ],
+
+                )),
+            SizedBox(height: 6,),
+            Card(
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  // side: BorderSide(width: 1,color: APP_BLACK_COLOR,)
+                ),
+                child: Column(
+
+                  children: <Widget>[
+                    ListTile(
+                        leading: Text("Dropped Cases",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
+                    ),
+                    Divider(),
+                    ListTile(
+                      title: Text("1 Cases",style: AppFontStyle.appBarTittle(PRIMARY_COLOR)),
+                      trailing: Icon(LineIcons.arrow_circle_right,color: PRIMARY_COLOR),
+                    ), ],
+
+                )),
+            SizedBox(height: 6,),
+            Card(
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  // side: BorderSide(width: 1,color: APP_BLACK_COLOR,)
+                ),
+                child: Column(
+
+                  children: <Widget>[
+                    ListTile(
+                        leading: Text("Lost Cases",style: AppFontStyle.titleAppBarStyle(APP_BLACK_COLOR),)
                     ),
                     Divider(),
                     ListTile(
