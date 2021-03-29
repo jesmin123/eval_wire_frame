@@ -11,7 +11,7 @@ class _DocumentsPendingWidgetState extends State<DocumentsPendingWidget> {
   @override
   Widget build(BuildContext context) {
     return  Card(
-      elevation: 5,
+      elevation: 3,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: ExpansionTile(
 

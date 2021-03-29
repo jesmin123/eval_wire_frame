@@ -10,6 +10,23 @@ class CustomerDetailsProvider extends ChangeNotifier{
   String _phone2;
   String _address;
   String _email;
+  String _cRc;
+  String _selfGenerated;
+
+
+  String get selfGenerated => _selfGenerated;
+
+  set selfGenerated(String value) {
+    _selfGenerated = value;
+    notifyListeners();
+  }
+
+  String get cRc => _cRc;
+
+  set cRc(String value) {
+    _cRc = value;
+    notifyListeners();
+  }
 
   String get email => _email;
 

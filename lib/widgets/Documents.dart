@@ -85,7 +85,7 @@ class _DocumentsState extends State<Documents> {
             child: Column(
               children: [
                 ListTile(
-                  title: Text('Pollution Free'),
+                  title: Text('Pollution Certificate'),
                   trailing: IconButton(icon: Icon(Icons.upload_outlined), onPressed: (){}),tileColor: Colors.white,
                 ),
                 Divider(thickness: 1,indent: 10,endIndent: 10,),

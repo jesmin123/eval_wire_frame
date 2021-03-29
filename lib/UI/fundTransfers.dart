@@ -24,7 +24,10 @@ class _FundTransfersState extends State<FundTransfers> {
                itemCount: 5,
                shrinkWrap: true,
                itemBuilder: (BuildContext context, int index){
-                 return FundTransferWidget();
+                 return Padding(
+                   padding: const EdgeInsets.only(top:8.0),
+                   child: FundTransferWidget(),
+                 );
 
                })
 

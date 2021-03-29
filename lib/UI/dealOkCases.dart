@@ -30,7 +30,10 @@ class _DealOkCasesState extends State<DealOkCases> {
                         shrinkWrap: true,
                         itemCount: 5,
                         itemBuilder: (BuildContext context, int index){
-                          return DealOk();
+                          return Padding(
+                            padding: const EdgeInsets.only(top:8.0),
+                            child: DealOk(),
+                          );
 
                         })
 

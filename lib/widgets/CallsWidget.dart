@@ -32,7 +32,7 @@ class _CallsWidgetState extends State<CallsWidget> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text('Cases Added:'),
+                    Text('Enquiry date:'),
                     SizedBox(width: 6,),
                     Text("15 OCT 2020")
                   ],

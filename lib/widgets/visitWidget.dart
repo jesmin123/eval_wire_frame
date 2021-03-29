@@ -27,7 +27,7 @@ class _VisitsWidgetState extends State<VisitsWidget> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text('Cases Added:'),
+                    Text('Enquiry date:'),
                     SizedBox(width: 6,),
                     Text("15 OCT 2020")
                   ],

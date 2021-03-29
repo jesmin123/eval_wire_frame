@@ -25,7 +25,10 @@ class _PriceNegotiationState extends State<PriceNegotiation> {
                itemCount: 5,
                itemBuilder:(BuildContext context,int index){
 
-                 return PriceWidget();
+                 return Padding(
+                   padding: const EdgeInsets.only(top:8.0),
+                   child: PriceWidget(),
+                 );
                } )
 
           ],

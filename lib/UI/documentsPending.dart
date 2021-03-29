@@ -21,7 +21,10 @@ class _DocumentsPendingState extends State<DocumentsPending> {
             shrinkWrap: true,
            itemCount: 5,
            itemBuilder: (BuildContext context,int index){
-              return DocumentsPendingWidget();
+              return Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: DocumentsPendingWidget(),
+              );
            })
       ],
     )

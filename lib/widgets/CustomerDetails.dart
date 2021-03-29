@@ -18,6 +18,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
   TextEditingController _phone2TextEditingController= new TextEditingController();
   TextEditingController _adressTextEditingController= new TextEditingController();
   TextEditingController _emailTextEditingController= new TextEditingController();
+  TextEditingController _dmsId= new TextEditingController();
   @override
   Widget build(BuildContext context) {
     FormData formData = Provider.of(context);
@@ -139,9 +140,9 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 ),
                 items: [
                   DropdownMenuItem(
-                    child: Text('20-30'),value: "20",),
-                  DropdownMenuItem(
-                    child: Text('30-40'),value: "30",),
+                    child: Text('DMS'),value: "DMS",),
+                  DropdownMenuItem(child: Text('CRC'),value: "CRC",),
+                  DropdownMenuItem(child: Text('Self Generated'),value: "Self Generated",),
 
 
                 ],
@@ -152,6 +153,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
 
             ],
           ),
+          customerDetailsProvider.sourceName!=null?getMyWidget(customerDetailsProvider.sourceName,customerDetailsProvider):Container(),
+
           SizedBox(height: 10,),
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -195,5 +198,91 @@ class _CustomerDetailsState extends State<CustomerDetails> {
         ],
       ),
     );
+  }
+
+  Widget getMyWidget(String sourceName, CustomerDetailsProvider customerDetailProvider) {
+    switch(sourceName){
+      case "DMS":
+        return Column(
+          children: [
+            SizedBox(height: 10,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(flex: 1,child: Text("DMS Id No"),),
+                Flexible(flex: 1,child: TextFormField(
+                  controller: _dmsId,
+                  decoration: FormBorder.myDecoration(),
+                ),),
+              ],
+            ),
+          ],
+        );
+        break;
+      case "CRC":
+        return Column(
+          children: [
+            SizedBox(height: 10,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(flex: 1,child: Text("CRC"),),
+                Flexible(flex: 2,child: DropdownButtonFormField(
+                  decoration: FormBorder.myDecoration(),
+                  items: [
+                    DropdownMenuItem(child: Text("POP Web"),value: "POP Web",),
+                    DropdownMenuItem(child: Text("MSIL Web"),value: "MSIL Web",),
+                    DropdownMenuItem(child: Text("OLX"),value: "OLX",),
+                    DropdownMenuItem(child: Text("Other Social Media"),value: "Other Social Media",),
+                    DropdownMenuItem(child: Text("Facebook"),value: "Facebook",),
+                    DropdownMenuItem(child: Text("My POP App"),value: "My POP App",),
+                    DropdownMenuItem(child: Text("GMB"),value: "GMB",),
+                    DropdownMenuItem(child: Text("Hyper Local"),value: "Hyper Local",),
+                    DropdownMenuItem(child: Text("Employee Referrals"),value: "Employee Referrals",),
+
+                  ],
+                  onChanged: (val){
+                    customerDetailProvider.cRc=val;
+                  },
+                ),),
+              ],
+            ),
+          ],
+        );
+        break;
+      case "Self Generated":
+        return Column(
+          children: [
+            SizedBox(height: 10,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(flex: 1,child: Text("Self Generated"),),
+                Flexible(flex: 2,child: DropdownButtonFormField(
+                  decoration: FormBorder.myDecoration(),
+                  items: [
+                    DropdownMenuItem(child: Text("OLX"),value: "OLX",),
+                    DropdownMenuItem(child: Text("Facebook"),value: "Facebook",),
+                    DropdownMenuItem(child: Text("Other Referrals"),value: "Other Referrals",),
+                    DropdownMenuItem(child: Text("MSIL Web"),value: "MSIL Web",),
+                    DropdownMenuItem(child: Text("Hyper Local"),value: "Hyper Local",),
+                    DropdownMenuItem(child: Text("Customer Referrals"),value: "Customer Referrals",),
+                    DropdownMenuItem(child: Text("Other Social Media"),value: "Other Social Media",),
+                    DropdownMenuItem(child: Text("Other Dealers"),value: "Other Dealers",),
+
+                  ],
+                  onChanged: (val){
+customerDetailProvider.selfGenerated=val;
+                  },
+                ),),
+              ],
+            ),
+          ],
+        );
+        break;
+    }
   }
 }

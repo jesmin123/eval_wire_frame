@@ -276,7 +276,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Icon(Icons.assignment_ind_outlined, color: PRIMARY_COLOR,),
                     SizedBox(width: LINE_HEIGHT *0.5,),
-                    Text('Team Lead', style: AppFontStyle.headingTextStyle(APP_BLACK_COLOR),)
+                    Text('Team Leader', style: AppFontStyle.headingTextStyle(APP_BLACK_COLOR),)
                   ],
                 ),
 

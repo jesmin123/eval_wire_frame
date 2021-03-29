@@ -40,7 +40,7 @@ class _EvaluatorPageState extends State<EvaluatorPage> {
                         style: AppFontStyle.regularTextStyle2(APP_BLACK_COLOR,
                             textSize: 22.0)),
                     Text(
-                      "Team Lead",
+                      "Team Leader",
                       style: AppFontStyle.bodyTextStyle2(APP_BLACK_COLOR),
                     ),
                     SizedBox(height: LINE_HEIGHT,),

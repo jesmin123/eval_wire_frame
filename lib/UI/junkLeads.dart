@@ -22,7 +22,10 @@ import 'package:flutter/material.dart';
                  shrinkWrap: true,
                  itemCount: 5,
                  itemBuilder: (BuildContext context, int index){
-                   return JunkLeadsWidget();
+                   return Padding(
+                     padding: const EdgeInsets.only(top:8.0),
+                     child: JunkLeadsWidget(),
+                   );
                  })
 
            ],

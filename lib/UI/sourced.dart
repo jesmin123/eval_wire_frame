@@ -23,7 +23,10 @@ class _SourcedState extends State<Sourced> {
                 itemCount: 5,
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context,int index){
-                  return SourcedWidget();
+                  return Padding(
+                    padding: const EdgeInsets.only(top:8.0),
+                    child: SourcedWidget(),
+                  );
                 })
 
 

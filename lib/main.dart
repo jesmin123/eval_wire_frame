@@ -1,4 +1,3 @@
-
 import 'package:eval_wire_frame/Provider/AccessoryProvider.dart';
 import 'package:eval_wire_frame/Provider/CustomerDetailsProvider.dart';
 import 'package:eval_wire_frame/Provider/DocumentDetailProvider.dart';
@@ -10,10 +9,12 @@ import 'package:eval_wire_frame/Provider/SteeringProvider.dart';
 import 'package:eval_wire_frame/Provider/otherDetailsProvider.dart';
 import 'package:eval_wire_frame/Provider/vehicleDetailsProvider.dart';
 import 'package:eval_wire_frame/UI/AddNewCase.dart';
+import 'package:eval_wire_frame/UI/SourceNow.dart';
 import 'package:eval_wire_frame/UI/assignedCases.dart';
 import 'package:eval_wire_frame/UI/channelWiseSourcing.dart';
 import 'package:eval_wire_frame/UI/dealOkCases.dart';
 import 'package:eval_wire_frame/UI/documentsPending.dart';
+import 'package:eval_wire_frame/UI/evaluatorPage.dart';
 import 'package:eval_wire_frame/UI/fundTransfers.dart';
 import 'package:eval_wire_frame/UI/junkLeads.dart';
 import 'package:eval_wire_frame/UI/leadsBreakUp.dart';
@@ -26,6 +27,7 @@ import 'package:provider/provider.dart';
 
 import 'Provider/EvaluationDetailProvider.dart';
 import 'Provider/InsuranceProvider.dart';
+import 'Provider/SourceNowProvider.dart';
 import 'Provider/form_data_provider.dart';
 import 'UI/homePage.dart';
 import 'constants/strings.dart';
@@ -38,6 +40,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final routes = <String, WidgetBuilder>{
     HOME_PAGE : (context)=> HomePage(),
+    EVALUATOR_PAGE : (context)=> EvaluatorPage(),
     DEAL_OK_CASE: (context)=>DealOkCases(),
     PENDING_CASES:(context)=>PendingCases(),
     ASSIGNED_CASES:(context)=>AssignedCases(),
@@ -50,6 +53,7 @@ class MyApp extends StatelessWidget {
     DOCUMENTS_PENDING:(context)=>DocumentsPending(),
     MY_APPOINTMENTS:(context)=>MyAppointments(),
     NEW_ENQUIRY_PAGE:(context)=>AddNewCase(),
+    SOURCE_NOW:(context)=>SourceNow(),
 
 
   };
@@ -70,6 +74,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<SteeringProvider>(create: (_)=>SteeringProvider()),
         ChangeNotifierProvider<AccessoryProvider>(create: (_)=>AccessoryProvider()),
         ChangeNotifierProvider<EvaluationDetailProvider>(create: (_)=>EvaluationDetailProvider()),
+        ChangeNotifierProvider<SorceNowProvider>(create: (_)=>SorceNowProvider()),
 
       ],
       child: MaterialApp(

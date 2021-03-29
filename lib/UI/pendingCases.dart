@@ -25,7 +25,10 @@ class _PendingCasesState extends State<PendingCases> {
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context,int index){
 
-                  return PendingWidget();
+                  return Padding(
+                    padding: const EdgeInsets.only(top:8.0),
+                    child: PendingWidget(),
+                  );
                 })
           ],
         ),
