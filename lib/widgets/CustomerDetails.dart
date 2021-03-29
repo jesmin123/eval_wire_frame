@@ -159,16 +159,19 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text('Buyer Type:')),
-              Flexible(flex: 1,child: DropdownButtonFormField(
+              Flexible(flex: 2,child: DropdownButtonFormField(
                 decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                   hintText: ' ',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                 ),
                 items: [
                   DropdownMenuItem(
-                    child: Text('20-30'),value: "20",),
-                  DropdownMenuItem(
-                    child: Text('30-40'),value: "30",),
+                    child: Text('Arena Exchange'),value: "Arena Exchange",),
+                  DropdownMenuItem(child: Text('Nexa Exchange'),value: "Nexa Exchange",),
+                  DropdownMenuItem(child: Text('Commercial Exchange'),value: "Commercial Exchange",),
+                  DropdownMenuItem(child: Text('MTV Exchange'),value: "MTV Exchange",),
+                  DropdownMenuItem(child: Text('Direct Exchange'),value: "Direct Exchange",),
+                  DropdownMenuItem(child: Text('Others'),value: "Others",),
 
 
                 ],
