@@ -66,7 +66,7 @@ class _SteeringSuspensionState extends State<SteeringSuspension> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text("$text",style: AppFontStyle.regularTextStyle2(APP_BLACK_COLOR),)),
-            Flexible(flex: 1,child: Row(
+            Flexible(flex: 2,child: Row(
               children: [
                 Radio(value: "Ok", groupValue: steeringProvider.steering[groupValue], onChanged: (val)=>steeringProvider.updateKey(groupValue, val),activeColor: PRIMARY_COLOR,),
                 Text("Ok"),

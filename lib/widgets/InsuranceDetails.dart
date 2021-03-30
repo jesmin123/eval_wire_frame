@@ -28,7 +28,7 @@ class _InsuranceDetailsState extends State<InsuranceDetails> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(flex: 1,child: Text("Insurance Type:")),
-              Flexible(flex: 1,
+              Flexible(flex: 2,
                 child: Column(
                 children: [
                   Row(

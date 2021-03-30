@@ -42,7 +42,7 @@ class _EvaluationDetailsState extends State<EvaluationDetails> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Expected Price')),
-                Flexible(flex: 1,child: TextFormField(
+                Flexible(flex: 2,child: TextFormField(
                   controller: _expectedPrice,
                   validator: (value) => value.isEmpty? 'this field is required' : null,
                   decoration: FormBorder.myDecoration(),
@@ -57,7 +57,7 @@ class _EvaluationDetailsState extends State<EvaluationDetails> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Quoted Price')),
-            Flexible(flex: 1,child: TextFormField(
+            Flexible(flex: 2,child: TextFormField(
               controller: _quotedPrice,
               validator: (value) => value.isEmpty? 'this field is required' : null,
               decoration: FormBorder.myDecoration(),
@@ -72,7 +72,7 @@ class _EvaluationDetailsState extends State<EvaluationDetails> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Vehicle Category')),
-            Flexible(flex: 1,child:DropdownButtonFormField(
+            Flexible(flex: 2,child:DropdownButtonFormField(
                 decoration: FormBorder.myDecoration(),
               items: [
                 DropdownMenuItem(child: Text("Sedan"),value: "Sedan",),
@@ -90,7 +90,7 @@ class _EvaluationDetailsState extends State<EvaluationDetails> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Reason for NTV')),
-            Flexible(flex: 1,child: TextFormField(
+            Flexible(flex: 2,child: TextFormField(
               controller: _reason,
               validator: (value) => value.isEmpty? 'this field is required' : null,
               decoration: FormBorder.myDecoration(),
@@ -105,7 +105,7 @@ class _EvaluationDetailsState extends State<EvaluationDetails> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Comment')),
-            Flexible(flex: 1,child: TextFormField(
+            Flexible(flex: 2,child: TextFormField(
               controller: _comment,
               validator: (value) => value.isEmpty? 'this field is required' : null,
               decoration: FormBorder.myDecoration(),
@@ -120,7 +120,7 @@ class _EvaluationDetailsState extends State<EvaluationDetails> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(flex: 1,child: Text('Follow Up')),
-            Flexible(flex: 1,child:DropdownButtonFormField(
+            Flexible(flex: 2,child:DropdownButtonFormField(
               decoration: FormBorder.myDecoration(),
               items: [
                 DropdownMenuItem(child: Text("Postponed"),value: "Postponed",),

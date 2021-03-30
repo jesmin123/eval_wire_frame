@@ -31,7 +31,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Reg No:')),
-                Flexible(flex: 1,child: TextFormField(
+                Flexible(flex: 2,child: TextFormField(
                   controller: _regNoEditingController,
 
                   validator: (value) => value.isEmpty ? 'this field is required' : null,
@@ -45,7 +45,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Name of Reg owner:')),
-                Flexible(flex: 1,child: TextFormField(
+                Flexible(flex: 2,child: TextFormField(
                   controller: _nameOfRegOwnerEditingController,
                   validator: (value) => value.isEmpty ? 'this field is required' : null,
                   decoration: FormBorder.myDecoration(),
@@ -58,7 +58,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Ownership:')),
-                Flexible(flex: 1,child: DropdownButtonFormField(
+                Flexible(flex: 2,child: DropdownButtonFormField(
                     decoration: InputDecoration(enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(15),borderSide: BorderSide(color: PRIMARY_COLOR,width: 1)),
                     hintText: 'Ownership',contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -92,7 +92,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Date of Reg:')),
-                Flexible(flex: 1,child: TextFormField(
+                Flexible(flex: 2,child: TextFormField(
                   controller: _dateOfRegEditingController,
                   validator: (value) => value.isEmpty? 'this field is required' : null,
                   decoration: FormBorder.myDecoration(),
@@ -105,7 +105,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Tax type:')),
-                Flexible(flex: 1,child: TextFormField(
+                Flexible(flex: 2,child: TextFormField(
                   controller: _taxTypeEditingController,
                   validator: (value) => value.isEmpty? 'this field is required' : null,
                   decoration: FormBorder.myDecoration(),
@@ -118,7 +118,7 @@ TextEditingController _taxValidityEditingController = new TextEditingController(
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(flex: 1,child: Text('Tax Validity:')),
-                Flexible(flex: 1,child: TextFormField(
+                Flexible(flex: 2,child: TextFormField(
                   controller: _taxValidityEditingController,
                   validator: (value) => value.isEmpty ? 'this field is required' : null,
                   decoration: FormBorder.myDecoration(),
