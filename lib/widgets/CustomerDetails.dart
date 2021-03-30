@@ -82,7 +82,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           SizedBox(height: 10,),
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Flexible(flex: 1,child: Text('Adress:')),
+              Flexible(flex: 1,child: Text('Address:')),
               Flexible(flex: 1,child: TextFormField(
                 controller: _adressTextEditingController,
                 validator: (value) => value.isEmpty? 'this field is required' : null,

@@ -309,7 +309,37 @@ class _ExteriorTyresState extends State<ExteriorTyres> {
 
           ],
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(flex: 1,child: Text("Flood Affected",style: AppFontStyle.regularTextStyle2(APP_BLACK_COLOR),)),
+            Flexible(flex: 1,child: Row(
+              children: [
+                Radio(value:1, groupValue: exteriorTyresProvider.flood, onChanged: (val)=>exteriorTyresProvider.flood = 1,activeColor: PRIMARY_COLOR,),
+                Text("Yes"),
+                Radio(value: 2, groupValue: exteriorTyresProvider.flood, onChanged: (val)=>exteriorTyresProvider.flood = 2,activeColor: PRIMARY_COLOR,),
+                Text("No"),
+              ],
+            ))
+          ],
+        ),
         SizedBox(height: 20,),
+        exteriorTyresProvider.flood==1?Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(flex: 1,child: Text('Flood Category')),
+            Flexible(flex: 1,child: DropdownButtonFormField(
+              decoration: FormBorder.myDecoration(),
+              items: [
+                DropdownMenuItem(value: "A",child: Text("A")),
+                DropdownMenuItem(value: "B",child: Text("B")),
+                DropdownMenuItem(value: "C",child: Text("C"))
+              ],
+              onChanged: (value){},
+            ))
+
+          ],
+        ):Container(),
+        SizedBox(height: 8,),
         Row(
           children: [
             Text('Rating:',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),

@@ -102,5 +102,13 @@ updateDropDown(dynamic key,dynamic value){
     exterior=exteriorTemp;
   }
 
+  int _flood = -1;
+
+int get flood => _flood;
+
+  set flood(int value) {
+    _flood = value;
+    notifyListeners();
+  }
 
 }
