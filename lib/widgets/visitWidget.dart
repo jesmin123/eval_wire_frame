@@ -15,7 +15,6 @@ class _VisitsWidgetState extends State<VisitsWidget> {
         Card(
           child: ExpansionTile(
             title: Text('John Varkey',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),
-            subtitle: Text('RS: 3.7L'),
             trailing: Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Text('12:30 PM')
@@ -155,7 +154,6 @@ class _VisitsWidgetState extends State<VisitsWidget> {
         Card(
           child: ExpansionTile(
             title: Text('John Varkey',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),
-            subtitle: Text('RS: 3.7L'),
             trailing: Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child: Text('12:30 PM')
@@ -295,7 +293,6 @@ class _VisitsWidgetState extends State<VisitsWidget> {
         Card(
           child: ExpansionTile(
             title: Text('John Varkey',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),
-            subtitle: Text('RS: 3.7L'),
             trailing: Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child: Text('12:30 PM')

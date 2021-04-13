@@ -36,14 +36,15 @@ class _PriceWidgetState extends State<PriceWidget> {
               ),
               trailing: Column(
                 children: [
-                  Text("Evaluator Price: 3.5L",style: AppFontStyle.bodyTextStyle(APP_BLACK_COLOR),),
+                  Text("Expected Price: 3.5L",style: AppFontStyle.bodyTextStyle(APP_BLACK_COLOR),),
+                  Text("Quoted Price: 3.7L",style: AppFontStyle.bodyTextStyle(APP_BLACK_COLOR),),
                   Container(
                     decoration: BoxDecoration(shape: BoxShape.circle,color: APP_GREEN_COLOR,),
-                    height: 28,
-                    width: 28,
-                    child: Icon(Icons.check,color: APP_WHITE_COLOR,),
+                    height: 10,
+                    width:10,
+                    child: Icon(Icons.check,color: APP_WHITE_COLOR,size: 5,),
                   ),
-                  Text('Update Price',style: AppFontStyle.bodyTextStyle(APP_BLACK_COLOR),)
+                  Text('Update Price',style: AppFontStyle.bodyTextStyle(PRIMARY_COLOR),)
 
                 ],
               ),

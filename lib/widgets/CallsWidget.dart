@@ -15,7 +15,6 @@ class _CallsWidgetState extends State<CallsWidget> {
         Card(
           child: ExpansionTile(
             title: Text('John Varkey',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),
-            subtitle: Text('RS: 3.7L'),
             trailing: Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Container(
@@ -160,7 +159,6 @@ class _CallsWidgetState extends State<CallsWidget> {
         Card(
           child: ExpansionTile(
             title: Text('John Varkey',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),
-            subtitle: Text('RS: 3.7L'),
             trailing: Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Container(
@@ -305,7 +303,6 @@ class _CallsWidgetState extends State<CallsWidget> {
         Card(
           child: ExpansionTile(
             title: Text('John Varkey',style: AppFontStyle.appBarTittle(APP_BLACK_COLOR),),
-            subtitle: Text('RS: 3.7L'),
             trailing: Padding(
               padding: const EdgeInsets.only(right: 16),
               child: Container(
