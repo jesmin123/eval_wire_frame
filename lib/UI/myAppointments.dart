@@ -33,7 +33,7 @@ class _MyAppointmentsState extends State<MyAppointments>  with SingleTickerProvi
         TabBar(
               tabs: [
                 Tab(child: Text('Calls',style: AppFontStyle.boldAppBarTitle(APP_BLACK_COLOR),), ),
-                Tab(child: Text('Visits',style: AppFontStyle.boldAppBarTitle(APP_BLACK_COLOR),),)
+                Tab(child: Text('Evaluations',style: AppFontStyle.boldAppBarTitle(APP_BLACK_COLOR),),)
               ],
             controller: _tabController,
               ),

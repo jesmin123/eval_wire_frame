@@ -44,7 +44,7 @@ class _PriceWidgetState extends State<PriceWidget> {
                     width:10,
                     child: Icon(Icons.check,color: APP_WHITE_COLOR,size: 5,),
                   ),
-                  Text('Update Price',style: AppFontStyle.bodyTextStyle(PRIMARY_COLOR),)
+                  Text('Update Price',style: AppFontStyle.bodyTextStyle(PRIMARY_COLOR ),)
 
                 ],
               ),
